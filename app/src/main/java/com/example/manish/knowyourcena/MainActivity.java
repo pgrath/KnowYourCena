@@ -1,15 +1,27 @@
 package com.example.manish.knowyourcena;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity {
+
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private static final String TWITTER_KEY = "aLUHCo0fLVn2eMmqKtEeCTTqa";
+    private static final String TWITTER_SECRET = "lPCNCQnaHM0g7To1P7qNVdRakXxQ8TvUl4gIsedQPkVsnnMURP";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+        Fabric.with(this, new Twitter(authConfig));
         setContentView(R.layout.activity_main);
     }
 
@@ -34,4 +46,25 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void goClick(View view){
+        startActivity(new Intent(this,CenaTwitter.class));
+
+    }
+
+
+    public void onOption1(MenuItem menu){
+        startActivity(new Intent(this, CenafyActivity.class));
+    }
+
+    public void onOption2(MenuItem menu){
+        startActivity(new Intent(this, GifCenaActivity.class));
+    }
+    public void onOption3(MenuItem menu)
+    {
+        //startActivity(new Intent(this,DisplayAll.class));
+    }
+
+
+
 }

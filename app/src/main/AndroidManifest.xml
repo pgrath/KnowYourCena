@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.manish.knowyourcena" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +19,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".GifCenaActivity" >
+        </activity>
+        <activity android:name=".CenafyActivity" >
+        </activity>
+        <activity android:name=".CenaTwitter" >
+        </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="8b52683d8b20cb195c46b2860078fa604d0d57fa" />
     </application>
 
 </manifest>

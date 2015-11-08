@@ -1,6 +1,18 @@
 <resources>
-    <string name="app_name">KnowYourCena</string>
-
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Hack2015</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_chat1">Cena Gif</string>
+    <string name="blank_view">""</string>
+    <string name="cenafy_view">Enter a sentence to see the cenafication or just hit cenafy</string>
+    <string name="button_go">GO!</string>
+    <string name="button_send">Send</string>
+    <string name="main_display">Are you ready to get Cena\'d?</string>
+    <string name="title_activity_cena_chat">CenaChatActivity</string>
+    <string name="button_cena">Cenafy</string>
+    <string name="opt1">Cenafy</string>
+    <string name="opt2">Cena Gif</string>
+    <string name="opt3">Images</string>
+    <string name="edit_infile">Infile</string>
+
+
 </resources>
