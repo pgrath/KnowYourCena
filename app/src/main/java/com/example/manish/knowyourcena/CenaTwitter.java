@@ -5,17 +5,16 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.util.Log;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import com.twitter.sdk.android.R.layout;
 import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 import io.fabric.sdk.android.Fabric;
 import com.twitter.sdk.android.core.*;
 import com.twitter.sdk.android.core.models.Tweet;
-import com.twitter.sdk.android.tweetui.TweetView;
-import com.twitter.sdk.android.tweetui.TweetUtils;
+import com.twitter.sdk.android.tweetui.*;
 
 public class CenaTwitter extends AppCompatActivity {
 
@@ -26,8 +25,6 @@ public class CenaTwitter extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
-        Fabric.with(this, new Twitter(authConfig));
         setContentView(R.layout.activity_cena_twitter);
         // TODO: Use a more specific parent
         final ViewGroup parentView = (ViewGroup) getWindow().getDecorView().getRootView();
